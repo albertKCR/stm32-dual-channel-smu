@@ -1,0 +1,12 @@
+../Core/Src/ADS1262.c:9:6:ADS1262_Select	8	static
+../Core/Src/ADS1262.c:14:6:ADS1262_Deselect	8	static
+../Core/Src/ADS1262.c:20:6:ADS1262_START	8	static
+../Core/Src/ADS1262.c:26:6:ADS1262_HARD_STOP	8	static
+../Core/Src/ADS1262.c:32:6:HAL_SPI_TxRxCpltCallback	16	static
+../Core/Src/ADS1262.c:42:6:HAL_GPIO_EXTI_Callback	16	static
+../Core/Src/ADS1262.c:51:6:ADS1262_WriteRegister	24	static
+../Core/Src/ADS1262.c:64:9:ADS1262_ReadRegister	24	static
+../Core/Src/ADS1262.c:84:10:ADS1262_ReadData	24	static
+../Core/Src/ADS1262.c:104:6:ADS1262_Init	8	static
+../Core/Src/ADS1262.c:130:6:ADS1262_setPGA	16	static
+../Core/Src/ADS1262.c:135:6:ADS1262_setAIN	16	static

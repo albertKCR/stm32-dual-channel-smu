@@ -1,0 +1,6 @@
+../Core/Src/DWIN.c:3:6:readVP	1
+../Core/Src/DWIN.c:18:6:setDisplayPage	1
+../Core/Src/DWIN.c:36:6:readDisplayFloat	4
+../Core/Src/DWIN.c:74:7:getVP	2
+../Core/Src/DWIN.c:88:6:dwinSendDouble	1
+../Core/Src/DWIN.c:114:6:doubleToHex	1

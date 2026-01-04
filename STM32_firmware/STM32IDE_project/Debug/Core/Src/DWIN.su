@@ -1,0 +1,6 @@
+../Core/Src/DWIN.c:3:6:readVP	24	static
+../Core/Src/DWIN.c:18:6:setDisplayPage	32	static
+../Core/Src/DWIN.c:36:6:readDisplayFloat	112	static
+../Core/Src/DWIN.c:74:7:getVP	32	static
+../Core/Src/DWIN.c:88:6:dwinSendDouble	48	static
+../Core/Src/DWIN.c:114:6:doubleToHex	24	static

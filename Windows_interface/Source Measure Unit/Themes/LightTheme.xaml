@@ -1,0 +1,10 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+	<!-- Cores para o modo claro -->
+	<SolidColorBrush x:Key="BackgroundColor" Color="White"/>
+	<!-- Fundo claro -->
+	<SolidColorBrush x:Key="ForegroundColor" Color="Black"/>
+	<!-- Texto escuro -->
+	<SolidColorBrush x:Key="PanelBackgroundColor" Color="#FFDDDDDD"/>
+	<!-- Painéis claros -->
+</ResourceDictionary>

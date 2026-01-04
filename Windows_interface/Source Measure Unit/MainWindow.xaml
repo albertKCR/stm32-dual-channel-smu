@@ -1,0 +1,138 @@
+﻿<Window x:Class="Source_Measure_Unit.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Source_Measure_Unit"
+        xmlns:mahApps="http://metro.mahapps.com/winfx/xaml/controls"
+        xmlns:oxy="http://oxyplot.org/wpf"
+        mc:Ignorable="d"
+        WindowState="Maximized"
+        Title="Source Measure Unit" Height="600" Width="800"
+        MinWidth="800"
+        MinHeight="600">
+    <Grid x:Name="UserGrid">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <!-- Menu -->
+            <RowDefinition Height="Auto"/>
+            <!-- ToolBar -->
+            <RowDefinition Height="*"/>
+            <!-- Conteúdo principal -->
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="200"/>
+            <!-- Painel esquerdo -->
+            <ColumnDefinition Width="*"/>
+            <!-- Painel central -->
+        </Grid.ColumnDefinitions>
+
+        <!-- Top Menu -->
+        <Menu Grid.Row="0" Grid.ColumnSpan="2" Background="{DynamicResource PanelBackgroundColor}">
+            <MenuItem Header="File">
+                <MenuItem Header="New Measurement"/>
+                <MenuItem Header="Save Measurement"/>
+                <MenuItem Header="Export Graph"/>
+                <Separator/>
+                <MenuItem Header="Exit"/>
+            </MenuItem>
+            <MenuItem Header="Settings">
+                <MenuItem Header="Dark Mode" Click="ToggleDarkMode_Click"/>
+                <MenuItem Header="Light Mode" Click="ToggleLightMode_Click"/>
+            </MenuItem>
+            <MenuItem Header="Help">
+                <MenuItem Header="About"/>
+            </MenuItem>
+        </Menu>
+
+        <!-- ToolBar -->
+        <ToolBar ToolBarTray.IsLocked="True" Grid.Row="1" Grid.ColumnSpan="2" Foreground="White" Background="White">
+            <ToolBar Band="1" BandIndex="1" Foreground="White">
+                
+                <!-- Home -->
+                <Button Click="Home_Click" ToolTip="New Measure">
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source="/Icons/home.png" Width="32" Height="32"/>
+                        <TextBlock Text="Home" FontSize="22" Margin="5,0,0,0"/>
+                    </StackPanel>
+                </Button>
+                <Separator/>
+
+                <!-- New Measure -->
+                <Button Click="NewMeasure_Click" ToolTip="New Measure">
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source="/Icons/NewMeasure.png" Width="32" Height="32"/>
+                        <TextBlock Text="New Measure" FontSize="22" Margin="5,0,0,0"/>
+                    </StackPanel>
+                </Button>
+                <Separator/>
+
+
+                <!-- Save Measurement -->
+                <Button Click="SaveMeasurement_Click" ToolTip="Save Measurement">
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source="/Icons/save.png" Width="28" Height="28"/>
+                        <TextBlock Text="Save Parameters" FontSize="22" Margin="5,0,0,0"/>
+                    </StackPanel>
+                </Button>
+                <Separator/>
+
+                <!-- Create Technique -->
+                <Button Click="StopMeasure_Click" ToolTip="Stop Measure">
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source="/Icons/Create.png" Width="32" Height="32"/>
+                        <TextBlock Text="Stop Measure" FontSize="22" Margin="0,0,0,0"/>
+                    </StackPanel>
+                </Button>
+
+            </ToolBar>
+        </ToolBar>
+
+        <!-- Left Panel - Measurement History -->
+        <StackPanel Grid.Row="2" Grid.Column="0" Background="{DynamicResource PanelBackgroundColor}" Margin="5">
+            <TextBlock Text="Measurement History" FontWeight="Bold" Margin="5"/>
+            <ListView x:Name="HistoryList" Background="{DynamicResource BackgroundColor}" Foreground="{DynamicResource ForegroundColor}" Height="188" Width="170">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel>
+                            <TextBlock Text="{Binding Name}" FontWeight="Bold"/>
+                            <TextBlock Text="{Binding Timestamp}"/>
+                        </StackPanel>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            <Button Content="Load Selected" Margin="5" Click="LoadMeasurement_Click"/>
+            <Button Content="Delete Selected" Margin="5" Click="DeleteMeasurement_Click"/>
+            <Button Content="Reload" Margin="5" Click="ReloadMeasurementHistory_Click"/>
+        </StackPanel>
+
+        <!-- Central Panel 
+        <TabControl Grid.Row="2" Grid.Column="1" Margin="5">
+            <TabItem Header="Measurement Configuration">
+                <StackPanel>
+                    <TextBlock Text="Select Technique:" Margin="5"/>
+                    <ComboBox x:Name="TechniqueComboBox" Margin="5">
+                        <ComboBoxItem Content="Voltammetric"/>
+                        <ComboBoxItem Content="Galvanostatic"/>
+                        <ComboBoxItem Content="Transistor Characterization"/>
+                        <ComboBoxItem Content="Custom Technique"/>
+                    </ComboBox>
+                    <Button Content="Configure Technique" Margin="5" Click="ConfigureTechnique_Click"/>
+                    <Button Content="Start Measurement" Margin="5" Click="StartMeasurement_Click"/>
+                </StackPanel>
+            </TabItem>
+            <TabItem Header="Real-Time Graph">
+                <Grid>
+                    <TextBlock Text="Real-Time Graph Will Appear Here" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Custom Technique Editor">
+                <StackPanel>
+                    <TextBlock Text="Create your own technique:" Margin="5"/>
+                    <Button Content="Add Step" Margin="5" Click="AddStep_Click"/>
+                    <Button Content="Save Technique" Margin="5" Click="SaveTechnique_Click"/>
+                </StackPanel>
+            </TabItem>
+        </TabControl>-->
+    </Grid>
+</Window>
