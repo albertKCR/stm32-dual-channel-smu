@@ -10,6 +10,7 @@ This SMU features two fully independent channels, each capable of operating as a
 System control is handled by an STM32 microcontroller, with both embedded (DWIN display) and PC-based (C# / WPF) user interfaces.
 
 > **Project status:** Prototype / Research
+> 
 > **Project total cost:** USD 410.
 
 ---
